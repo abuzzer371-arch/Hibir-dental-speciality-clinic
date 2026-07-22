@@ -89,7 +89,7 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
 
       <main>
         {/* Hero Section */}
-        <section id="home" className="relative pt-20 pb-32 overflow-hidden bg-gray-50">
+        <section id="home" className="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-gray-50">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-teal-600/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/3 -z-10" />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -98,18 +98,18 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="max-w-2xl"
+                className="max-w-2xl text-center md:text-left"
               >
                 <div className="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full mb-4">
                   #1 RATED CLINIC IN ADDIS ABABA
                 </div>
-                <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-                  Your Smile is Our <br/> <span className="text-teal-600">Top Priority.</span>
+                <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+                  Your Smile is Our <br className="hidden md:block"/> <span className="text-teal-600">Top Priority.</span>
                 </h1>
-                <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-lg leading-relaxed">
+                <p className="text-lg md:text-xl text-slate-500 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
                   Experience modern dentistry with a gentle touch. We provide fast emergency relief and comprehensive treatments for your family.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 items-center">
+                <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
                   <a href="#treatments" className="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-lg font-bold text-center transition-all">
                     Explore Treatments
                   </a>
@@ -128,7 +128,7 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="hidden md:block relative rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-2xl border border-gray-100"
+                className="relative rounded-3xl overflow-hidden aspect-video md:aspect-[4/3] bg-slate-100 shadow-2xl border border-gray-100 mt-8 md:mt-0"
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-teal-900/10 to-transparent z-10" />
                 <img 
@@ -144,7 +144,7 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-20 sm:h-24 bg-teal-50 border border-teal-100 rounded-2xl flex flex-col sm:flex-row items-center justify-around p-8 sm:p-0 gap-8 sm:gap-0 max-w-4xl shadow-sm"
+              className="mt-12 md:mt-20 sm:h-24 bg-teal-50 border border-teal-100 rounded-2xl flex flex-col sm:flex-row items-center justify-around p-8 sm:p-0 gap-8 sm:gap-0 max-w-4xl shadow-sm"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-white rounded-lg shadow-sm text-teal-600">
@@ -180,9 +180,9 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
         </section>
 
         {/* About Us */}
-        <section id="about" className="py-24 bg-white border-t border-gray-200">
+        <section id="about" className="py-16 md:py-24 bg-white border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -237,7 +237,7 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
         </section>
 
         {/* Treatments */}
-        <section id="treatments" className="py-24 bg-gray-50 border-t border-gray-200">
+        <section id="treatments" className="py-16 md:py-24 bg-gray-50 border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -324,7 +324,7 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
         </section>
 
         {/* Testimonials */}
-        <section id="reviews" className="py-24 bg-slate-900 text-white relative border-t border-slate-800">
+        <section id="reviews" className="py-16 md:py-24 bg-slate-900 text-white relative border-t border-slate-800">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div 
@@ -375,7 +375,7 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
         </section>
 
         {/* Our Services Gallery */}
-        <section className="py-24 bg-white border-t border-gray-200 overflow-hidden">
+        <section className="py-16 md:py-24 bg-white border-t border-gray-200 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
             <div className="text-center max-w-2xl mx-auto">
               <div className="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-[10px] font-bold rounded-full mb-4 uppercase tracking-widest">
@@ -428,7 +428,7 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
         </section>
 
         {/* Booking Section */}
-        <section id="book" className="py-24 bg-gray-50 border-t border-gray-200">
+        <section id="book" className="py-16 md:py-24 bg-gray-50 border-t border-gray-200">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
@@ -438,7 +438,7 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
               className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
             >
               <div className="grid md:grid-cols-5">
-                <div className="md:col-span-2 bg-teal-900 text-white p-10 flex flex-col justify-between">
+                <div className="md:col-span-2 bg-teal-900 text-white p-8 md:p-10 flex flex-col justify-between">
                   <div>
                     <h3 className="text-2xl font-bold mb-4 text-white">Book Your Visit</h3>
                     <p className="text-teal-100 mb-8 leading-relaxed text-sm">Schedule an appointment with our expert team today. We'll get back to you to confirm your slot.</p>
@@ -465,7 +465,7 @@ export default function LandingPage({ onSubmitBooking }: { onSubmitBooking: (app
                   </div>
                 </div>
                 
-                <div className="md:col-span-3 p-10">
+                <div className="md:col-span-3 p-6 md:p-10">
                   <BookingForm onSubmit={onSubmitBooking} />
                 </div>
               </div>
